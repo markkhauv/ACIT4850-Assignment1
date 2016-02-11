@@ -41,9 +41,11 @@ li a:hover {
 
 
 #players {
+    margin-top:100px;
     border: 1px solid black;
     width:49%;
     float: right;
+        
 }
 
 

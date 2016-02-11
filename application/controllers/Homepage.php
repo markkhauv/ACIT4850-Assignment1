@@ -22,6 +22,15 @@ class Homepage extends Application {
     public function index() {
         $this->data['pagebody'] = 'homepage';
         $this->render();
+        
+        $query = $this->db->query('SELECT Player, Peanuts FROM players');
+                    echo "<table>";
+                foreach ($query->result() as $row)
+                {
+                    echo "<tr><td>". "<a href='http://google.com'>".$row->Player. "'</a>" . $row->Peanuts. "</td></tr>";
+                    
+                }
+                    echo "</table>";
+        
     }
-
 }
