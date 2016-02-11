@@ -1,3 +1,4 @@
 Newest at top
+2/11/2016 12:53 Added the database connection
 2/11/2016 10:32 Created all the base pages and made them work
 2/04/2016 Initial file
