@@ -17,6 +17,17 @@
                         <li><a href="/">Home</a></li>
                         <li><a href="/portfolio">Portfolio</a></li>
                         <li><a href="/assembly">Assembly</a></li>
+                        <li id="login">
+                            <form action="MY_Controller/login" method="post">
+                                <label>User Name: </label>
+                                <input id="name" name="username" placeholder="username"  type="text"></input>
+                                <label>Password: </label>
+                                <input id="password" name="password" placeholder="******" type="password"></input>
+
+                                <input type="submit" class="submit" name="submit" id="submit" value=" Login "></input>
+                                <!--<button type="button" class="btn btn-success" >TEST</button>-->
+                            </form>
+                        </li>
                     </ul>
                 </span>
             </div>
