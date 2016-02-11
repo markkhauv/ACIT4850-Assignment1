@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Homepage extends Application {
+class Portfolio extends Application {
 
 	/**
 	 * Index Page for this controller.
@@ -20,6 +20,7 @@ class Homepage extends Application {
 	 */
 	public function index()
 	{
-		$this->load->view('Homepage');
+		        $this->data['pagebody'] = 'portfolio';
+        $this->render();
 	}
 }
