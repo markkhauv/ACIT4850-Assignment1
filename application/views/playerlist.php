@@ -4,7 +4,7 @@
     <table>
     {players}
     <tr>
-        <td>{Player}</td>
+        <td><a href="/portfolio?name={Player}" a>{Player}</a></td>
         <td>{Peanuts}</td>
     </tr>
     {/players}
