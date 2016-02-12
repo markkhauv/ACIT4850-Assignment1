@@ -7,8 +7,6 @@
 	
 	</div>
         
-        <div id="players">
-		<p>List of Players:</p>
-                {playerlist}		
-	</div>
+    
+              {playerlist}           
         

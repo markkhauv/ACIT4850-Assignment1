@@ -20,7 +20,7 @@ class Portfolio extends Application {
 	 */
 	public function index()
 	{
-		        $this->data['pagebody'] = 'portfolio';
+	$this->data['pagebody'] = 'portfolio';
         $this->render();
 	}
 }
