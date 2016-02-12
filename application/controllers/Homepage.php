@@ -12,6 +12,7 @@ class Homepage extends Application {
    	public function index()
 	{
                 $this->data['playerlist'] = $this->players();
+                $this->data['status'] = $this->status();
                 $this->data['content'] = $this->parser->parse('homepage', $this->data, true);
                 $this->render();
 	}
@@ -29,5 +30,20 @@ class Homepage extends Application {
             $this->data['players'] = $rows;
             
             return $this->parser->parse('playerlist', $this->data, true);
+        }
+        
+         private function status()
+        {
+            $this->load->model('Status');
+            
+          
+            $rows = array();
+            foreach ($this->Status->get_status() as $record)
+            {
+                $rows[] = (array) $record;
+            }
+            $this->data['collections'] = $rows;
+            
+            return $this->parser->parse('status', $this->data, true);
         }
 }
