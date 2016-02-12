@@ -1,4 +1,8 @@
 Newest at top
+2/11/2016 21:12 Added the playerslist view
+2/11/2016 20:49 Added the MY_Model
+2/11/2016 20:27 Added the robots model
+2/11/2016 13:51 Created the css file
 2/11/2016 12:53 Added the database connection
 2/11/2016 10:32 Created all the base pages and made them work
 2/04/2016 Initial file
