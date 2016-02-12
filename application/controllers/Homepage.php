@@ -4,33 +4,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Homepage extends Application {
 
-    /**
-     * Index Page for this controller.
-     *
-     * Maps to the following URL
-     * 		http://example.com/index.php/welcome
-     * 	- or -
-     * 		http://example.com/index.php/welcome/index
-     * 	- or -
-     * Since this controller is set as the default controller in
-     * config/routes.php, it's displayed at http://example.com/
-     *
-     * So any other public methods not prefixed with an underscore will
-     * map to /index.php/welcome/<method_name>
-     * @see https://codeigniter.com/user_guide/general/urls.html
-     */
-    public function index() {
-        $this->data['pagebody'] = 'homepage';
-        $this->render();
-        
-        $query = $this->db->query('SELECT Player, Peanuts FROM players');
-                    echo "<table>";
-                foreach ($query->result() as $row)
-                {
-                    echo "<tr><td>". "<a href='http://google.com'>".$row->Player. "'</a>" . $row->Peanuts. "</td></tr>";
-                    
-                }
-                    echo "</table>";
-        
-    }
+     function __construct()
+	{
+		parent::__construct();
+	}
+    
+   	public function index()
+	{
+                $this->data['playerlist'] = $this->players();
+                $this->data['content'] = $this->parser->parse('homepage', $this->data, true);
+                $this->render();
+	}
+    
+    private function players()
+        {
+            $this->load->model('Robots');
+            
+          
+            $rows = array();
+            foreach ($this->Robots->get_players() as $record)
+            {
+                $rows[] = (array) $record;
+            }
+            $this->data['players'] = $rows;
+            
+            return $this->parser->parse('playerlist', $this->data, true);
+        }
 }
