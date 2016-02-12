@@ -21,6 +21,7 @@ class Portfolio extends Application {
 	public function index()
 	{
 	$this->data['pagebody'] = 'portfolio';
+        $this->data['content'] = $this->parser->parse('portfolio', $this->data, true);
         $this->render();
 	}
 }
