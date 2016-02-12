@@ -1,7 +1,11 @@
-	<h1>Welcome to Assembly!</h1>
+<h1>Welcome to Assembly!</h1>
 
-	<div id="body">
-		<p>This is the base homepage m8</p>
+{headparts}
+<br>
+{bodyparts}
+<br>
+{legparts}
 
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
-	</div>
+
+<br>
+{preview}
