@@ -13,6 +13,7 @@ class Portfolio extends Application {
 	{
                 $this->data['dropdown'] = $this->players();
                 $this->data['playerportfolio'] = $this->portfo();
+                $this->data['playerportfolio'] = $this->ahead();
                 $this->data['content'] = $this->parser->parse('portfolio', $this->data, true);
                         $this->data['username'] = $this->session->userdata('username');
                 $this->render();
@@ -46,6 +47,21 @@ class Portfolio extends Application {
             $this->data['players'] = $rows;
             
             return $this->parser->parse('dropdown', $this->data, true);
+        }
+        
+    private function ahead()
+        {
+            $this->load->model('Portfo');
+            
+          
+            $rows = array();
+            foreach ($this->Portfo->get_headA() as $record)
+            {
+                $rows[] = (array) $record;
+            }
+            $this->data['collections'] = $rows;
+            
+            return $this->parser->parse('playerportfolio', $this->data, true);
         }
         
 }
