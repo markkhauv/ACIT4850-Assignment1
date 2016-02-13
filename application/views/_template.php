@@ -8,7 +8,7 @@
     <body>
         <div id="wrapper">
             <div id="header">
-                <span class="myhead"><img src="../../assets/Robots.jpg" alt="Robot" style="width:auto;"></img></span>
+                <span class="myhead"><img src="../../assets/Robots.jpg" alt="Robot" style="width:100%;height:176px;"></img></span>
                 <span class="mynav">
                     <ul>
                         <li><a href="/">Home</a></li>
