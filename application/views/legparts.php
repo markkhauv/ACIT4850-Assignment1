@@ -1,7 +1,8 @@
 <h1>Legs</h1>
-<select onChange="window.location.href=this.value">
+
+<select onchange="getComboA(this)">
             <option>Select a Part</option>
             {collections}            
-                <option value="/assembly?leg={Piece}">{Piece}</option>
+                <option value="{Piece}">{Piece}</option>
             {/collections}
 </select>
