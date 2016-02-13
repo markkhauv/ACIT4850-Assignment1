@@ -8,12 +8,13 @@
     <body>
         <div id="wrapper">
             <div id="header">
-                <span class="myhead">CyberBot</span>
+                <span class="myhead"><img src="../../assets/Robots.jpg" alt="Robot" style="width:auto;"></img></span>
                 <span class="mynav">
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="/portfolio">Portfolio</a></li>
-                        <li><a href="/assembly">Assembly</a></li>
+
+                        </li>
                     </ul>
                 </span>
             </div>
