@@ -1,4 +1,7 @@
 Newest at top
+
+2/13/2016 11:18 modified template
+2/13/2016 11:18 modified css - correctly displays footer
 2/13/2016 11:18 Fixed the player info panel
 2/12/2016 16:15 Added a logo
 2/12/2016 13:57 Added the portfolio view
