@@ -1,6 +1,8 @@
 
 <div id="players">
+    
     <p>Player Portfolio:</p>
+    
     <table>
         <tr><td>Time</td><td>Activity</td><td>Series</td>  
     {transactions}
