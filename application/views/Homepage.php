@@ -1,5 +1,5 @@
 
-	<h1>Welcome to CodeIgniter!</h1>
+	<h1>Dashboard</h1>
 
             {status}
         

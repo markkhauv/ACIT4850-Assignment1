@@ -30,7 +30,7 @@
                 {content}
             </div>
             <div id="footer" class="span12">
-                Copyright &copy; 2014,  <a href="mailto:someone@somewhere.com">Me</a>.
+                Copyright &copy; 2016 | Ramon Dhami, Victor Van, Sivan Alkalay and Mark Khauv
             </div>
         </div>
     </body>
