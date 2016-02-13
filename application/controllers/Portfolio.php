@@ -14,6 +14,7 @@ class Portfolio extends Application {
                 $this->data['dropdown'] = $this->players();
                 $this->data['playerportfolio'] = $this->portfo();
                 $this->data['content'] = $this->parser->parse('portfolio', $this->data, true);
+                        $this->data['username'] = $this->session->userdata('username');
                 $this->render();
 	}
     

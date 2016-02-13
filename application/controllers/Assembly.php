@@ -10,6 +10,7 @@ class Assembly extends Application {
                 $this->data['legparts'] = $this->partsleg();
                 $this->data['content'] = $this->parser->parse('assembly', $this->data, true);
                 $this->data['pagebody'] = 'assembly';
+                        $this->data['username'] = $this->session->userdata('username');
                 $this->render();
 	}
         
