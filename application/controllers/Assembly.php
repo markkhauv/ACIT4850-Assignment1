@@ -58,4 +58,6 @@ class Assembly extends Application {
             
             return $this->parser->parse('legparts', $this->data, true);
         }
+        
+        
 }
