@@ -14,7 +14,7 @@ class Robots extends MY_Model {
     
     function get_players()
     {
-        $query = $this->db->query('SELECT Player, Peanuts FROM players');          
+        $query = $this->db->query('SELECT a.Player, a.Peanuts, COUNT(b.Piece) AS Equity FROM `players` a INNER JOIN `collections` b ON a.Player = b.Player GROUP BY a.Player ORDER BY a.Player ASC;');          
         return $query->result();
     }
         
