@@ -1,5 +1,5 @@
 
-<div id="players">
+<div id="player-portfolio">
     
     <p>Player Portfolio:</p>
     
