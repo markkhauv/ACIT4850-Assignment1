@@ -1,8 +1,7 @@
 <h1>Legs</h1>
-
-<select onchange="getComboA(this)">
+<select name="legs">
             <option>Select a Part</option>
             {collections}            
-                <option value="{Piece}">{Piece}</option>
+                <option value="{Piece}" name="legs">{Piece}</option>
             {/collections}
 </select>
