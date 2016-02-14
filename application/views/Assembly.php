@@ -5,7 +5,7 @@
       Players can choose the three pieces to make a completed
       bot with. Don't forget to click on "assemble" after your choice </div>
 <br/>
-<form method="post" action="/assembly/assemble">
+<form method="post" action="/assemble">
 
     {headparts}
     <br>
