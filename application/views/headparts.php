@@ -1,4 +1,4 @@
-<h1>Heads</h1>
+<h3>Heads</h3>
 <select name="head">
             <option>Select a Part</option>
             {collections}            

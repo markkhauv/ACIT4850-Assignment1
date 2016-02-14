@@ -1,5 +1,7 @@
 Newest at top
 
+2/14/2016 3:18 created sidebar, added click jpg, polished look
+2/14/2016 2:18 updated template and css
 2/13/2016 11:18 modified template
 2/13/2016 11:18 modified css - correctly displays footer
 2/13/2016 11:18 Fixed the player info panel
