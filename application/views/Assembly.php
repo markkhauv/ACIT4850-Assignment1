@@ -10,11 +10,10 @@
     <input type="submit" value="Assemble">
 </form>
 
-    {head}
+    <img src="../assets/{head}.png">
     <br>
-    {body}
+    <img src="../assets/{body}.png">
     <br>
-    {legs}
+    <img src="../assets/{legs}.png">
 
 <br>
-{preview}
