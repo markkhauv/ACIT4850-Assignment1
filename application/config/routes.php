@@ -55,4 +55,4 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['login'] = 'homepage/login';
 $route['logout'] = 'homepage/logout';
-$route['assembly/assemble'] = 'assembly/assemble';
+$route['assemble'] = 'assembly/assemble';

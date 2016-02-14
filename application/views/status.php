@@ -6,6 +6,7 @@
     <tr>
         <td>{Token}</td>
         <td>{Piece}</td>
+        <td>{Player}</td>
     </tr>
     {/collections}
     </table>

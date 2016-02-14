@@ -14,7 +14,7 @@ class Status extends MY_Model {
     
     function get_status()
     {
-        $query = $this->db->query('SELECT Token, Piece FROM collections');          
+        $query = $this->db->query('SELECT Token, Piece, Player FROM collections');          
         return $query->result();
     }
         
