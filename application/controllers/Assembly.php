@@ -5,6 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Assembly extends Application {
 
     public function index() {
+        // shows bot assembly page, dropdowns for sections of bots, and login username
         $this->data['headparts'] = $this->partshead();
         $this->data['bodyparts'] = $this->partsbody();
         $this->data['legparts'] = $this->partsleg();
@@ -14,9 +15,9 @@ class Assembly extends Application {
         $this->render();
     }
 
+    // requests headparts data from Parts model
     private function partshead() {
         $this->load->model('Parts');
-
 
         $rows = array();
         foreach ($this->Parts->get_partszero() as $record) {
@@ -27,9 +28,9 @@ class Assembly extends Application {
         return $this->parser->parse('headparts', $this->data, true);
     }
 
+    // requests bodyparts data from Parts model
     private function partsbody() {
         $this->load->model('Parts');
-
 
         $rows = array();
         foreach ($this->Parts->get_partsone() as $record) {
@@ -40,9 +41,9 @@ class Assembly extends Application {
         return $this->parser->parse('bodyparts', $this->data, true);
     }
 
+    // requests legparts data from Parts model
     private function partsleg() {
         $this->load->model('Parts');
-
 
         $rows = array();
         foreach ($this->Parts->get_partstwo() as $record) {
@@ -53,8 +54,8 @@ class Assembly extends Application {
         return $this->parser->parse('legparts', $this->data, true);
     }
 
+    // assembles robot parts if they match and displays an error message if they don't
     function assemble() {
-
         $head = $_POST["head"];
         $body = $_POST["body"];
         $legs = $_POST["legs"];
@@ -69,3 +70,6 @@ class Assembly extends Application {
     }
 
 }
+
+/* End of file Assembly.php */
+/* Location: application/controllers/Assembly.php */

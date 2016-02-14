@@ -9,6 +9,7 @@ class Homepage extends Application {
     }
 
     public function index() {
+        // shows playerlist, status, content, and login username
         $this->data['playerlist'] = $this->players();
         $this->data['status'] = $this->status();
         $this->data['content'] = $this->parser->parse('homepage', $this->data, true);
@@ -16,9 +17,9 @@ class Homepage extends Application {
         $this->render();
     }
 
+    // requests players data from Robots model
     private function players() {
         $this->load->model('Robots');
-
 
         $rows = array();
         foreach ($this->Robots->get_players() as $record) {
@@ -29,9 +30,9 @@ class Homepage extends Application {
         return $this->parser->parse('playerlist', $this->data, true);
     }
 
+    // requests status data from Status model
     private function status() {
         $this->load->model('Status');
-
 
         $rows = array();
         foreach ($this->Status->get_status() as $record) {
@@ -42,6 +43,7 @@ class Homepage extends Application {
         return $this->parser->parse('status', $this->data, true);
     }
 
+    // session data for login and logout
     function login() {
 
         $username = array(
@@ -54,7 +56,6 @@ class Homepage extends Application {
 
     function logout() {
 
-
         $username = array(
             'username' => 'No one logged in'
         );
@@ -64,3 +65,6 @@ class Homepage extends Application {
     }
 
 }
+
+/* End of file Homepage.php */
+/* Location: application/controllers/Homepage.php */
