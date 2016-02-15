@@ -106,3 +106,8 @@ li a:hover {
    background:#036;
 
 }
+
+
+table, th, td {
+border: 1px solid black;
+}
