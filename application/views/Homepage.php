@@ -10,6 +10,10 @@
             {status}
         
             <br>
-    
+            <div>
+            Game state is : {state}
+            The countdown is : {countdown}
+            The Round is : {round}
+            </div>
             {playerlist}           
         
