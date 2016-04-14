@@ -12,6 +12,7 @@ class Homepage extends Application {
         // shows playerlist, status, content, and login username
         $this->data['playerlist'] = $this->players();
         $this->data['status'] = $this->status();
+        $this->gameState();
         $this->data['content'] = $this->parser->parse('homepage', $this->data, true);
         $this->data['username'] = $this->session->userdata('username');
         $this->render();
@@ -41,6 +42,15 @@ class Homepage extends Application {
         $this->data['collections'] = $rows;
 
         return $this->parser->parse('status', $this->data, true);
+    }
+
+    // requests status data from gameStatus model
+    private function gameState() {
+        $this->load->model('GameState');
+        $this->GameState->get_gameState();
+        $this->data['state'] = $this->GameState->get_state();
+        $this->data['countdown'] = $this->GameState->get_countdown();
+        $this->data['round'] = $this->GameState->get_round();
     }
 
     // session data for login and logout
