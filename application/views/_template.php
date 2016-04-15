@@ -18,13 +18,21 @@
                         <li><a href="/portfolio">Portfolio</a></li>
                         <li><a href="/assembly">Assembly</a></li>
                         <li>{username}</li>
-                        <li><form method="post" action="/login">
-                                <input type="text" name="name" value="Username"><br>
-                                <input type="submit" value="login">
-                        </form></li>
-                        <li>    <form method="post" action='/logout'>
-                            <input type="submit" value="Logout">
-                        </form></li>
+                        
+                        
+                         <li>
+                           <a href="/login">Login</a>
+                          
+                            
+                        </li>
+                        
+                        
+                        <li>
+                           <a href="<?=site_url('/homepage/logout/')?>">Logout</a>
+                          
+                            
+                        </li>
+                     
                     </ul>
         </nav>
            
