@@ -44,27 +44,43 @@ class Homepage extends Application {
     }
 
     // session data for login and logout
-    function login() {
-
-        $username = array(
-            'username' => $_POST["name"]
-        );
-        $this->session->set_userdata($username);
-        $this->data['username'] = $this->session->userdata('username');
-        $this->index();
+    function login($submit=null) {
+if ($submit ==null){
+       $this->load->view('/inc/header');
+        $this->load->view('login');
+         $this->load->view('/inc/footer');
+         return true;
     }
+$username = $this->input->post('username');
+$password = $this->input->post('password');
 
-    function logout() {
-
-        $username = array(
-            'username' => 'No one logged in'
-        );
-        $this->session->set_userdata($username);
-        $this->data['username'] = $this->session->userdata('username');
-        $this->index();
-    }
-
+$this->load->model('user_model');
+$result = $this->user_model->login('user', $username, $password);
+if ($result== true){
+    
+   $this->session->set_userdata('user_id', 1);
+    
+   redirect('/', 'refresh');
+   
+   
+}else{
+    redirect ('/login', 'refresh');
 }
+    
+   
+}
+
+    
+public function logout()
+{
+    $this->session->sess_destroy();
+    redirect ('/login', 'refresh');
+}
+
+
+    
+    }
+    
 
 /* End of file Homepage.php */
 /* Location: application/controllers/Homepage.php */
