@@ -3,7 +3,7 @@
     <head>
         <title>{pagetitle}</title>
         <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"/>
-        <link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
     </head>
     <body>
           <span class="myhead"><img src="../../assets/Robots.jpg" alt="Robot" style="width:100%;height:176px;"></img></span>
