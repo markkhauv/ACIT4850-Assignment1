@@ -17,3 +17,19 @@
             </div>
             {playerlist}           
         
+
+            <br/>
+            
+            {message}
+            
+            <br/>
+            
+            <form action="Homepage/register" method="post">
+
+                Team:  <input type="text" name="team"><br/>
+                Name:  <input type="name" name="name"/><br/>
+            Password:  <input type="password" name="password"/><br/>                     
+            <button type="submit" name="register" formaction="Homepage/register">Register</button>
+            </form>
+            
+            
