@@ -1,5 +1,8 @@
 Newest at top
 
+4/12/2016 13:46 Added agent registration
+4/10/2016 17:32 Fixed errors from last assignment
+4/10/2016 12:32 Added user registration
 2/14/2016 15:50 Added comments to controllers and models 
 2/14/2016 03:18 Created sidebar, added click jpg, polished look
 2/14/2016 02:18 Updated template and css
