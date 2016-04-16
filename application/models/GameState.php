@@ -25,7 +25,7 @@ class GameState extends CI_Model {
     }
 
     function get_gameState() {
-        $string = $this->curl->simple_get('http://botcards.jlparry.com/status');
+        $string = $this->curl->simple_get('http://ken-botcards.azurewebsites.net/status');
 
         $xml = simplexml_load_string($string);
             $this->code = (int) $xml->state;

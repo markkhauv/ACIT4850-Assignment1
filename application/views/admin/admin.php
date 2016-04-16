@@ -1,4 +1,4 @@
-
+<a href="../index.php"> Home </a>
 <h1> Create New User</h1>
 
 <form action="/admin/create_user" method="post">
