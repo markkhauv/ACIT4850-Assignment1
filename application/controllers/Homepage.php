@@ -17,7 +17,7 @@ class Homepage extends Application {
         $this->gameState();
         $this->data['content'] = $this->parser->parse('homepage', $this->data, true);
         $this->data['username'] = $this->session->userdata('username');
-        
+
         $this->render();
     }
 
@@ -86,7 +86,7 @@ class Homepage extends Application {
 
     function register() {
         $this->data['pagebody'] = 'registering';
-	$this->render();
+        $this->render();
         $this->agentRegister();
         redirect('Homepage', 'refresh');
     }

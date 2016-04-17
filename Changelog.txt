@@ -1,5 +1,8 @@
 Newest at top
 
+4/17/2016 15:15 Formatting and added comments to views, models, controllers
+4/17/2016 15:00 Added comments to models
+4/17/2016 15:00 Added comments to controllers
 4/12/2016 13:46 Added agent registration
 4/10/2016 17:32 Fixed errors from last assignment
 4/10/2016 12:32 Added user registration

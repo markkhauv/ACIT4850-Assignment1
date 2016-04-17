@@ -14,7 +14,7 @@ class Portfo extends MY_Model {
             $query = $this->db->query('SELECT DateTime, Trans, Series FROM Transactions WHERE Player="' . $name . '"');
             return $query->result();
         } else
-            // returns portfolio data from the logged in user
+        // returns portfolio data from the logged in user
             $name = $_GET['name'];
         $query = $this->db->query('SELECT DateTime, Trans, Series FROM Transactions WHERE Player="' . $name . '"');
         return $query->result();
@@ -33,7 +33,7 @@ class Portfo extends MY_Model {
             $query = $this->db->query('SELECT SUM(Piece="11a-0") AS 11aH, SUM(Piece="11a-1") AS 11aB, SUM(Piece="11a-2") AS 11aL, SUM(Piece="11b-0") AS 11bH, SUM(Piece="11b-1") AS 11bB, SUM(Piece="11b-2") AS 11bL, SUM(Piece="11c-0") AS 11cH, SUM(Piece="11c-1") AS 11cB, SUM(Piece="11c-2") AS 11cL   FROM collections WHERE Player="' . $name . '"');
             return $query->result();
         } else
-            // returns the sums of robot parts of the logged in user
+        // returns the sums of robot parts of the logged in user
             $name = $_GET['name'];
         $query = $this->db->query('SELECT SUM(Piece="11a-0") AS 11aH, SUM(Piece="11a-1") AS 11aB, SUM(Piece="11a-2") AS 11aL, SUM(Piece="11b-0") AS 11bH, SUM(Piece="11b-1") AS 11bB, SUM(Piece="11b-2") AS 11bL, SUM(Piece="11c-0") AS 11cH, SUM(Piece="11c-1") AS 11cB, SUM(Piece="11c-2") AS 11cL   FROM collections WHERE Player="' . $name . '"');
         return $query->result();
