@@ -54,43 +54,34 @@ class Homepage extends Application {
     }
 
     // session data for login and logout
-    function login($submit=null) {
-if ($submit ==null){
-       $this->load->view('/inc/header');
-        $this->load->view('login');
-         $this->load->view('/inc/footer');
-         return true;
+    function login($submit = null) {
+        if ($submit == null) {
+            $this->load->view('/inc/header');
+            $this->load->view('login');
+            $this->load->view('/inc/footer');
+            return true;
+        }
+        $username = $this->input->post('username');
+        $password = $this->input->post('password');
+
+        $this->load->model('user_model');
+        $result = $this->user_model->login('user', $username, $password);
+        if ($result == true) {
+
+            $this->session->set_userdata('user_id', 1);
+
+            redirect('/', 'refresh');
+        } else {
+            redirect('/login', 'refresh');
+        }
     }
-$username = $this->input->post('username');
-$password = $this->input->post('password');
 
-$this->load->model('user_model');
-$result = $this->user_model->login('user', $username, $password);
-if ($result== true){
-    
-   $this->session->set_userdata('user_id', 1);
-    
-   redirect('/', 'refresh');
-   
-   
-}else{
-    redirect ('/login', 'refresh');
-}
-    
-   
-}
-
-    
-public function logout()
-{
-    $this->session->sess_destroy();
-    redirect ('/login', 'refresh');
-}
-
-
-    
+    public function logout() {
+        $this->session->sess_destroy();
+        redirect('/login', 'refresh');
     }
-    
+
+}
 
 /* End of file Homepage.php */
 /* Location: application/controllers/Homepage.php */
