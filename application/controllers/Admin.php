@@ -1,11 +1,5 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 class Admin extends CI_Controller {
     
     public function __construct()
@@ -83,3 +77,6 @@ public function logout()
           echo '<br> <a href="/admin/dashboard">Click here to go back</a>';
     }
 }
+
+/* End of file Admin.php */
+/* Location: application/controllers/Admin.php */
